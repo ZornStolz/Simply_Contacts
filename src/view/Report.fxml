@@ -71,6 +71,7 @@
             <HBox prefHeight="245.0" prefWidth="575.0" spacing="40.0">
                <children>
                   <TableView fx:id="coursesTV" onMouseClicked="#showSelectedCourseInfo" prefHeight="189.0" prefWidth="219.0">
+
                     <columns>
                       <TableColumn fx:id="coursesTVColumn" prefWidth="169.0" text="Courses" />
                     </columns>

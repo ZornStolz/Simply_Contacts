@@ -221,6 +221,7 @@ public class MainScreenController {
     }
 
     @SuppressWarnings("unchecked")
+
     public void loadStudent() {
         if (!currentStudent.getPictureURL().equals(" ")) {
                 studentPhoto.setImage(new Image(currentStudent.getPictureURL()));

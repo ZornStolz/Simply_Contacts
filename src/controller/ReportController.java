@@ -39,7 +39,7 @@ public class ReportController {
     private Label leastCourseLabel; // Value injected by FXMLLoader
 
     @FXML // fx:id="coursesTV"
-    private TableView coursesTV; // Value injected by FXMLLoader
+    private TableView<Course> coursesTV; // Value injected by FXMLLoader
 
     @FXML // fx:id="coursesTVColumn"
     private TableColumn coursesTVColumn; // Value injected by FXMLLoader
@@ -75,7 +75,7 @@ public class ReportController {
     @FXML
     void showSelectedCourseInfo() {
         if (coursesTV.getSelectionModel().getSelectedItem() != null) {
-            current = (Course) coursesTV.getSelectionModel().getSelectedItem();
+            current = coursesTV.getSelectionModel().getSelectedItem();
             String infoToAdd = "Course Name: ";
             infoToAdd += current.getName() + "\n";
             infoToAdd += "Credits: ";
