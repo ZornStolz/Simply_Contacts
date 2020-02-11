@@ -18,15 +18,7 @@ public class Agenda {
 		contacts = new ArrayList<>();
 		courses = new ArrayList<>();
 		readCoursesDatabase();
-		readContactDatabase();
-//		System.out.println(assignedCoursesAverage());
-//		System.out.println(assignedCreditsAverage());
-//		Course c = mostAssignedCourse();
-//		System.out.println(c.getName() +  ", " + c.getStudents().size());
-//		c = lessAssignedCourse();
-//		System.out.println(c.getName() + ", " + c.getStudents().size());
-//		for (Course co : courses) 
-//			System.out.println(co.getName() + ", " + co.getStudents().size());
+		readContactDatabase();		
 	}
 	
 	private void readContactDatabase() throws Exception{
@@ -231,21 +223,31 @@ public class Agenda {
 	public int assignedCoursesAverage() {
 		
 		int count = 0;
+		int n = 0;
 		
-		for(Student student : contacts)
-			count += student.getCourses().size();
+		for(Student student : contacts) {
+			if(student.getCourses().size() > 0) {
+				count += student.getCourses().size();
+				n ++;
+			}
+		}
 		
-		return (count / contacts.size());		
+		return (count / n);		
 	}
 	
 	public int assignedCreditsAverage() {
 		
 		int count = 0;
+		int n = 0;
 		
-		for(Student student : contacts)
-			count += student.creditsNumber();
+		for(Student student : contacts) {
+			if(student.getCredits()> 0) {
+				count += student.creditsNumber();
+				n++;
+			}
+		}
 		
-		return (count / contacts.size());		
+		return (count / n);		
 	}
 
 	public Course mostAssignedCourse() {
@@ -278,19 +280,19 @@ public class Agenda {
 	 */
 	public void outputContacts() throws IOException {
 		//Obtain info from contacts
-		String cts = "name;phoneNumber;email;birthdate(DD-MM-YYYY);address;code;semester;career;photo;courses";
-		for(Student s : contacts) {
-			cts += s.persist() + "\n";
-		}
-		//Write contact information in database
+		
 		PrintWriter pw = new PrintWriter(new File(ContactsDataBase));
-		pw.write(cts);
-		String crs = "name;credits;nrc;description";
-		for(Course c : courses) {
-			crs += c.persist() + "\n";
+		pw.write("name;phoneNumber;email;birthdate(DD-MM-YYYY);address;code;semester;career;photo;courses \n");
+		for(Student s : contacts) {
+			pw.write(s.persist() + "\n");
 		}
+		pw.close();
+		
 		pw = new PrintWriter(new File(CoursesDataBase));
-		pw.write(crs);
+		pw.write("name;credits;nrc;description \n");
+		for(Course c : courses) {
+			pw.write(c.persist() + "\n");
+		}
 		pw.close();
 	}
 	

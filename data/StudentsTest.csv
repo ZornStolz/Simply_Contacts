@@ -1,4 +1,4 @@
-nombre;Telefono;Email;Cumpleaños (Día/Mes/Año);Dirección;Codigo;Semestre;career;photo;materias
-Jhon Edward Mora Mora;3166360553;jhonedmora@gmail.com;13-12-00;Calle 42A# 39E - 125 Cali Colombia;A00355710;5;Software Engineering;./data/Pictures/mora.jpg;1092/8721
-Manuel   Balanta Quintero;3218746583;mbalantaq@gmail.com;07-03-00;Distrito de Aguablanca Comuna 13;A00351728;5;Software Engineering;./data/Pictures/balanta.jpg;8721/0912
-Juan Diego Naranjo Tafur;3145608074;juannaranjo1206@gmail.com;12-06-00;134 Kendall Court;A00351771;5;Software Engineering;./data/Pictures/naranjo.jpg;1092/8721
+fullName;phone;email;birthdate;address;studentId;semester;career;photoURL;nrcOfCourses
+Jhon Edward Mora Mora;3166360553;jhonedmora@gmail.com;13/12/2000;Calle 42A# 39E - 125 Cali, Colombia;A00355710;5;Software Engineering;https://avatars2.githubusercontent.com/u/47871531?s=460&v=4;10342,10321,11144,10818,10394,10446,10819,10445
+Manuel Balanta Quintero;3218746583;mbalantaq@gmail.com;7/3/2000;Distrito de Aguablanca,Comuna 13;A00351728;5;Software Engineering;https://pbs.twimg.com/profile_images/985501710469750786/A9YVxSRl_400x400.jpg; 
+Juan Diego Naranjo Tafur;3145608074;juannaranjo1206@gmail.com;12/6/2000;134 Kendall Court;A00351771;5;Software Engineering;https://pbs.twimg.com/profile_images/1341405140/jd1_400x400.GIF; 

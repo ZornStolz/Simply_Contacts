@@ -350,9 +350,14 @@ return birthdate;
 		//Last fields
 		ret+=address+";"+code+";"+semester+";"+career+";"+picture+";";
 		//Courses
-		for(Course c:courses) {
-			ret+=c.getNRC()+",";
-		}
+		
+		if(courses.size() > 0) {			
+			for(Course c:courses) {
+				ret+=c.getNRC()+",";
+			}
+		}else
+			ret+= " ";
+		
 		return ret;
 	}
 	
