@@ -80,9 +80,15 @@ public class EditContactController {
 
     @FXML
     void saveStudent(ActionEvent e) throws Exception {
-        Student studentToAdd = new Student(contactNameLabel.getText(), phoneTF.getText(), emailTF.getText(),
+        String photoUrl;
+        if (photoURL_TF.getText().isEmpty()) {
+            photoUrl = " ";
+        } else {
+            photoUrl = photoURL_TF.getText();
+        }
+        Student studentToAdd = new Student(nameTF.getText(), phoneTF.getText(), emailTF.getText(),
                 dobTF.getText(), addressTF.getText(), idTF.getText(), semesterTF.getText(), careerTF.getText()
-                , photoURL_TF.getText());
+                , photoUrl);
 
         if (!nrcTF.getText().isEmpty()) {
             studentToAdd.getCourses().clear();
@@ -93,8 +99,8 @@ public class EditContactController {
             }
         }
 
-        student = studentToAdd;
-
+        mainController.setCurrentStudent(studentToAdd);
+        agenda.getContacts().add(studentToAdd);
         returnToMainScreen(e);
         mainController.loadStudent();
     }

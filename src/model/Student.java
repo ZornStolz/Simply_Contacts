@@ -345,7 +345,7 @@ return birthdate;
 		//First fields
 		ret+=name+";"+phoneNumber+";"+email+";";
 		//Birth date field
-		ret+=birthdate;
+		ret+=birthdate+";";
 //		ret+=birthdate.getDayOfMonth()+"/"+birthdate.getMonthValue()+"/"+birthdate.getYear()+";";
 		//Last fields
 		ret+=address+";"+code+";"+semester+";"+career+";"+picture+";";

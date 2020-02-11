@@ -106,7 +106,7 @@ public class MainScreenController {
     }
 
     @FXML
-    void editCourse() throws IOException {
+    void editCourse() throws IOException {//TODO: Fix
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../view/EditCourse.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = new Stage();
@@ -169,10 +169,10 @@ public class MainScreenController {
         stage.show();
     }
 
-    @FXML
-    void openCourseSearchWindow() throws IOException {
-        loadStage("../view/SearchCourse.fxml", "Search Course");
-    }
+//    @FXML
+//    void openCourseSearchWindow() throws IOException {
+//        loadStage("../view/SearchCourse.fxml", "Search Course");
+//    }
 
     @FXML
     void openStudentSearchWindow() throws IOException {
@@ -223,7 +223,7 @@ public class MainScreenController {
     @SuppressWarnings("unchecked")
     public void loadStudent() {
         if (!currentStudent.getPictureURL().equals(" ")) {
-            studentPhoto.setImage(new Image(currentStudent.getPictureURL()));
+                studentPhoto.setImage(new Image(currentStudent.getPictureURL()));
         } else {
             studentPhoto.setImage(new Image("https://www.sackettwaconia.com/wp-content/uploads/default-profile.png"));
         }
