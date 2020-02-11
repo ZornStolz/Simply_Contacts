@@ -111,7 +111,7 @@ public class Agenda {
 	public Student searchStudentName(String n) throws ContactException {
 		Student find=null;
 		for(int i=0; i<contacts.size(); i++) {
-			if(n.equals(contacts.get(i).getName())) {
+			if(n.equalsIgnoreCase(contacts.get(i).getName())) {
 				find=contacts.get(i);
 			}
 		}
@@ -125,7 +125,7 @@ public class Agenda {
 	public Student searchStudentAdress(String a)throws ContactException{
 		Student find=null;
 		for(int i=0; i<contacts.size(); i++) {
-			if(a.equals(contacts.get(i).getAddress())) {
+			if(a.equalsIgnoreCase(contacts.get(i).getAddress())) {
 				find=contacts.get(i);
 			}
 		}
@@ -139,7 +139,7 @@ public class Agenda {
 	public Student searchStudentPhone(String p)throws ContactException{
 		Student find=null;
 		for(int i=0; i<contacts.size(); i++) {
-			if(p.equals(contacts.get(i).phoneNumber())) {
+			if(p.equalsIgnoreCase(contacts.get(i).phoneNumber())) {
 				find=contacts.get(i);
 			}
 		}
@@ -153,7 +153,7 @@ public class Agenda {
 	public Student searchStudentCode(String c) throws ContactException{
 		Student find=null;
 		for(int i=0; i<contacts.size(); i++) {
-			if(c.equals(contacts.get(i).getCode())) {
+			if(c.equalsIgnoreCase(contacts.get(i).getCode())) {
 				find=contacts.get(i);
 			}
 		}
@@ -167,7 +167,7 @@ public class Agenda {
 	public Student searchStudentEmail(String e) throws ContactException {
 		Student find=null;
 		for(int i=0; i<contacts.size(); i++) {
-			if(e.equals(contacts.get(i).getEmail())) {
+			if(e.equalsIgnoreCase(contacts.get(i).getEmail())) {
 				find=contacts.get(i);
 			}
 		}
@@ -181,7 +181,7 @@ public class Agenda {
 	public Course searchCourseName(String n)throws Exception {
 		Course find=null;
 		for(int i=0; i<courses.size(); i++) {
-			if(n.equals(courses.get(i).getName())) {
+			if(n.equalsIgnoreCase(courses.get(i).getName())) {
 				find=courses.get(i);
 			}
 		}
