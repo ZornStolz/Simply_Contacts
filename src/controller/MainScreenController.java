@@ -196,7 +196,7 @@ public class MainScreenController {
     }
 
     @SuppressWarnings("unchecked")
-    public void loadStudent() {
+    void loadStudent() {
         studentPhoto.setImage(new Image(currentStudent.getPictureURL()));
         studentLabel.setText(currentStudent.getName());
         String infoToAdd = "Name: ";
