@@ -27,7 +27,6 @@
           <Menu mnemonicParsing="false" text="Search">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#openStudentSearchWindow" text="Search for Student" />
-                  <MenuItem mnemonicParsing="false" onAction="#openCourseSearchWindow" text="Search for Course" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Help">
